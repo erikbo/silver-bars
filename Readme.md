@@ -28,6 +28,8 @@ Implementation made by Erik Bohlin
 - I have made the decision to use standard Java unchecked exception (IllegalArgumentException and NoSuchElementException) instead
   of implementing custom exceptions. While a custom exception might convey slightly more information I considered it over engineering
   for this test.
+  
+- The quantity is forced to one decimal by rounding upwards. I decided to do it this way to avoid several decimal places, this forces me     to either round up/down or just remove one or more digits. I felt that rounding upwards was the most logical choice.
 
 - I decided to use JUnit theories (https://github.com/junit-team/junit4/wiki/Theories) for testing the validation of
   the order registration. This is instead of creating multiple different test methods with different orders.
